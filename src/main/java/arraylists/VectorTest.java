@@ -16,8 +16,11 @@ public class VectorTest {
         var sort = list.stream().sorted();
         System.out.println(sort.toList());
 
-        Map<String, HashMap<String, ?>> table = new Hashtable<>();
+        Map<String, HashMap<String, Object>> table = new Hashtable<>();
         table.put("kamarbaraka",new HashMap<>());
+        table.get("kamarbaraka").put("name", "kamar");
+        var name = table.get("kamarbaraka").get("name");
+        System.out.println(name);
 
 
     }
